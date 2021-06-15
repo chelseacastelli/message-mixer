@@ -62,12 +62,12 @@ const randomWalk = () => {
 
     // Change noun from plural to singular when referring to 1 instance of it
     if (number === 1 && noun[noun.length-1] === 's') { 
-        let cut = 1;
+        let cutChars = 1;
         if (noun[noun.length-2] == 'e'){
-            cut += 1;
+            cutChars += 1;
         }
 
-        noun = noun.slice(0, noun.length-cut);
+        noun = noun.slice(0, noun.length-cutChars);
     }
 
     console.log(subject, verb, String(number), adjective, noun);
